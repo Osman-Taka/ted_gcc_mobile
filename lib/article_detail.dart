@@ -44,9 +44,12 @@ class ArticleDetail extends StatelessWidget {
         appBar: AppBar(
           title: Text(articleModel.heading, style: Styles.appbarStyle),
         ),
-        body: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: _renderBody(context, articleModel)));
+        body: SingleChildScrollView(
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: _renderBody(context, articleModel))
+          )
+        );
   }
 }
