@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.ted_gcc_mobile_app">
    <application
-        android:label="ted_gcc_mobile_app"
+        android:label="TED GCC"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
