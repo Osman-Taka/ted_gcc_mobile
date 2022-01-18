@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ted_gcc_mobile_app/articles.dart';
 import 'package:ted_gcc_mobile_app/article_list.dart';
-
 void main() {
   runApp(const MyApp());
 }

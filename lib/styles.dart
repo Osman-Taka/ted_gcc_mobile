@@ -5,7 +5,7 @@ class Styles{
   static const _textSizeLarge = 24.0;
   static const _textColorDefault = Color(0xFF666666);
   static const _textColorStrong = Color(0xFF000000);
-  static const _fontDefault = "Ubuntu";
+  static const _fontDefault = "Poppins";
   static const header = TextStyle(
       fontSize: _textSizeLarge,
       color: _textColorStrong,

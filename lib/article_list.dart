@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ted_gcc_mobile_app/article_detail.dart';
 import 'package:ted_gcc_mobile_app/styles.dart';
 import 'package:ted_gcc_mobile_app/models/article_model.dart';
+import 'package:ted_gcc_mobile_app/navbar.dart';
 
 class ArticleList extends StatelessWidget{
   final List<ArticleModel> articles;
@@ -38,6 +39,7 @@ class ArticleList extends StatelessWidget{
         appBar: AppBar(
           title: const Text("Articles", style: Styles.appbarStyle)
         ),
+        drawer: const NavBar(),
         body: ListView.builder(
             itemCount: articles.length,
             itemBuilder: _locationTile
