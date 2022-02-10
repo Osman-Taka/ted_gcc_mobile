@@ -75,7 +75,7 @@ class AboutUs extends StatelessWidget {
                   child: ElevatedButton.icon(
                       icon: const Icon(Icons.code),
                       onPressed: () {
-                        launch("https://gitlab.com/manyet1k/ted-gcc-mobile-app"); //launch is from url_launcher package to launch URL
+                        launch("https://github.com/Osman-Taka/ted_gcc_mobile"); //launch is from url_launcher package to launch URL
                       },
                       label: const Text("View the source code")
                   )
