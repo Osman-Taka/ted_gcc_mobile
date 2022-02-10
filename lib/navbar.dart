@@ -40,7 +40,7 @@ class NavBar extends StatelessWidget {
           UserAccountsDrawerHeader(accountName: const Text(""), accountEmail: const Text(""),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const NetworkImage("https://tedsakaryagcc3.xyz/img/app.png"),
+                image: const NetworkImage("https://tedsakaryagcc.xyz/img/app.png"),
               )
             )
           ),
