@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ted_gcc_mobile_app/navbar.dart';
 import 'package:ted_gcc_mobile_app/styles.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class AboutUs extends StatelessWidget {
   const AboutUs({Key? key}) : super(key: key);
@@ -20,7 +21,12 @@ class AboutUs extends StatelessWidget {
             children: [
               Container(
                   constraints: BoxConstraints.tightFor(height: 200),
-                  child: Image.network("https://gitlab.com/manyet1k/2022-gcc-website/-/raw/master/img/markus-spiske-r1BS0pzlr1M-unsplash.jpg", fit: BoxFit.fitWidth)
+                  child: CachedNetworkImage(
+                    imageUrl: "https://gitlab.com/manyet1k/2022-gcc-website/-/raw/master/img/markus-spiske-r1BS0pzlr1M-unsplash.jpg",
+                    placeholder: (context, url) => CircularProgressIndicator(),
+                    errorWidget: (context, url, error) => Icon(Icons.error),
+                    fit: BoxFit.fitWidth,
+                  )
               ),
               Container(
                   padding: EdgeInsets.fromLTRB(20, 20, 20, 10),

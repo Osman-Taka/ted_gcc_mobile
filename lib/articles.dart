@@ -6,9 +6,9 @@ class Articles {
     return [
       ArticleModel(
           "What is the UN doing for Human Rights",
-          "https://www.un.org/development/desa/indigenouspeoples/wp-content/uploads/sites/19/2016/11/United-Nations-Human-Rights-Commission-LOGO.jpg",
+          "https://www.tibet.net/wp-content/uploads/2018/10/unnamed-2.jpg",
           <ArticleContent>[
-            ArticleContent(" By Ulaş Kuşçu", "text here."),
+            ArticleContent("By Ulaş Kuşçu", "Civil citizens are considered to be the most damaged group of people in war and similar events. Although attacking civilian citizens is a war crime, some countries can ignore this crime. The United Nations has some protection and security services that it does in this regard. \n\nThe first of these is the Civil Protection Mechanism, Civil Protections Mechanism aims to improve cooperation and coordination between the Union and member states in the field of civil dec to be prepared for human and natural disasters and to prevent disasters. About 368.5 million euros of the budget was allocated to the mechanism in the period 2014-2020.\n\nSince its inception in 2001, more than 300 disaster and civil protection mechanisms have responded to more than 200 requests for help has been closely followed, and soon the 2014 Ebola outbreak in West Africa, the Western Balkans, taking place in 2014, flood, clash, and the European refugee crisis in 2015 South Ukraine has been activated. The specific objectives of the program are:\n\n1- Dec of a culture of prevention and development of cooperation between civil protection and other related services, as well as the establishment of a better system of protection against disasters by preventing and reducing the potential impact of disasters,\n\n2- Ensuring that member states and the EU are better prepared,\n\n3- Ensuring public awareness and preparedness against disasters."),
           ]
       ),
       ArticleModel(
