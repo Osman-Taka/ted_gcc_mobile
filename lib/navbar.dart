@@ -37,21 +37,21 @@ class NavBar extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          UserAccountsDrawerHeader(accountName: const Text(""), accountEmail: const Text(""),
+          const UserAccountsDrawerHeader(accountName: Text(""), accountEmail: Text(""),
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: const NetworkImage("https://i.ibb.co/v3mH2Vx/app.png"),
+                image: AssetImage('assets/images/navbar.png'),
               )
             )
           ),
           ListTile(
-            leading: Icon(Icons.description),
-            title: Text("Articles", style: Styles.textDefault),
+            leading: const Icon(Icons.description),
+            title: const Text("Articles", style: Styles.textDefault),
             onTap: () => pageLoader(context, 0)
           ),
           ListTile(
-            leading: Icon(Icons.people),
-            title: Text("About Us", style: Styles.textDefault),
+            leading: const Icon(Icons.people),
+            title: const Text("About Us", style: Styles.textDefault),
             onTap: () => pageLoader(context, 1)
           ),
         ],

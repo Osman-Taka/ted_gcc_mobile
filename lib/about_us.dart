@@ -20,16 +20,20 @@ class AboutUs extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Container(
-                  constraints: BoxConstraints.tightFor(height: 200),
+                  constraints: const BoxConstraints.tightFor(height: 200),
                   child: CachedNetworkImage(
                     imageUrl: "https://gitlab.com/manyet1k/2022-gcc-website/-/raw/master/img/markus-spiske-r1BS0pzlr1M-unsplash.jpg",
-                    placeholder: (context, url) => CircularProgressIndicator(),
-                    errorWidget: (context, url, error) => Icon(Icons.error),
+                    placeholder: (context, url) => const Center(child: SizedBox(
+                        width: 40,
+                        height: 40,
+                        child: CircularProgressIndicator()
+                    )),
+                    errorWidget: (context, url, error) => const Icon(Icons.error),
                     fit: BoxFit.fitWidth,
                   )
               ),
               Container(
-                  padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
+                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
                   child: const Text(
                     "We are the TED Sakarya High School Global Citizenship Club members. Over the past couple of years, we have been researching the global conflicts that citizens and our planet are face to face with. Our aim is to improve the awareness for citizenship conflicts, gender diversity and issues in our neighborhood.\n\nAs the Citizenship Theories group, this year we have developed a website and mobile application for global awareness. You can access the website from the link below:",
                     style: Styles.textDefault,

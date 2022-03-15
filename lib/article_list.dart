@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:ted_gcc_mobile_app/article_detail.dart';
 import 'package:ted_gcc_mobile_app/styles.dart';
@@ -11,7 +12,16 @@ class ArticleList extends StatelessWidget{
   Widget _itemThumbnail(ArticleModel thumbnailLocation){
     return Container(
       constraints: const BoxConstraints.tightFor(width: 100),
-      child: Image.network(thumbnailLocation.url, fit: BoxFit.fitWidth)
+      child: CachedNetworkImage(
+          imageUrl:thumbnailLocation.url,
+          placeholder: (context, url) => const Center(child: SizedBox(
+            width: 40,
+            height: 40,
+            child: CircularProgressIndicator()
+          )),
+          errorWidget: (context, url, error) => const Icon(Icons.error),
+          fit: BoxFit.fitWidth
+      )
     );
   }
 
@@ -47,5 +57,4 @@ class ArticleList extends StatelessWidget{
       )
     );
   }
-
 }
