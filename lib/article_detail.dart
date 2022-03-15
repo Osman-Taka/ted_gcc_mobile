@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/article_model.dart';
 import 'package:ted_gcc_mobile_app/styles.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class ArticleDetail extends StatelessWidget {
   final ArticleModel articleModel;
@@ -28,7 +29,17 @@ class ArticleDetail extends StatelessWidget {
   Widget _bannerImage(String url, double height) {
     return Container(
         constraints: BoxConstraints.tightFor(height: height),
-        child: Image.network(url, fit: BoxFit.fitWidth));
+        child: CachedNetworkImage(
+          imageUrl: url,
+          placeholder: (context, url) => const Center(child: SizedBox(
+            width: 60,
+            height: 60,
+            child: CircularProgressIndicator()
+          )),
+          errorWidget: (context, url, error) => const Icon(Icons.error),
+          fit: BoxFit.fitWidth
+      )
+    );
   }
 
   List<Widget> _renderBody(BuildContext context, ArticleModel articleModel) {

@@ -12,7 +12,9 @@ class ArticleList extends StatelessWidget{
   Widget _itemThumbnail(ArticleModel thumbnailLocation){
     return Container(
       constraints: const BoxConstraints.tightFor(width: 100),
-      child: CachedNetworkImage(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(8.0),
+        child: CachedNetworkImage(
           imageUrl:thumbnailLocation.url,
           placeholder: (context, url) => const Center(child: SizedBox(
             width: 40,
@@ -22,7 +24,7 @@ class ArticleList extends StatelessWidget{
           errorWidget: (context, url, error) => const Icon(Icons.error),
           fit: BoxFit.fitWidth
       )
-    );
+    ));
   }
 
   Widget _itemTitle(ArticleModel titleLocation){

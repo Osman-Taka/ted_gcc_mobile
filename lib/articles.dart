@@ -44,7 +44,7 @@ class Articles {
 
       ),
       ArticleModel(
-          " The Impact of Social media on Society (Positive and Adverse Effects)",
+          "The Impact of Social media on Society (Positive and Adverse Effects)",
           "https://blog-cw.s3.amazonaws.com/2018/07/social-media-tips-for-small-business.png",
           <ArticleContent>[
             ArticleContent("By ReadingJunction","Today, we are grappling with the shiny new Cs: innovation, connectivity, interaction, development (of new ideas and projects), society (with shared interests), partnership and (change of game) competitiveness.It made you wonder that anything so strong, but with such a massive reaches, hopefully, won’t be all well.\nJust as there are still two sides to a coin, and the same goes for social networks. Consequently, different cultures have different viewpoints on this controversial topic. Therefore, in this article on social networks, we’ll see the pros and cons impact of social media on society."),
