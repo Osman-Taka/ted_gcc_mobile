@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import '../models/article_model.dart';
 import 'package:ted_gcc_mobile_app/styles.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -14,13 +15,13 @@ class ArticleDetail extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
           child: Text(articleModel.description[i].title,
               textAlign: TextAlign.left,
-              style: Styles.header
+              style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.header : DarkStyles.header)
         )
       ));
       x.add(Container(
         padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
         child: Text(articleModel.description[i].text,
-        style: Styles.textDefault),
+        style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.textDefault : DarkStyles.textDefault)),
       ));
     }
     return x;
@@ -53,7 +54,7 @@ class ArticleDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(articleModel.heading, style: Styles.appbarStyle),
+          title: Text(articleModel.heading, style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.appbarStyle : DarkStyles.appbarStyle)),
         ),
         body: SingleChildScrollView(
           child: Column(

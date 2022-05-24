@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:ted_gcc_mobile_app/navbar.dart';
 import 'package:ted_gcc_mobile_app/styles.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -11,7 +12,7 @@ class AboutUs extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("About Us", style: Styles.appbarStyle)
+        title: Text("About Us", style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.appbarStyle : DarkStyles.appbarStyle))
       ),
       drawer: const NavBar(),
       body: SingleChildScrollView(
@@ -34,9 +35,9 @@ class AboutUs extends StatelessWidget {
               ),
               Container(
                   padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-                  child: const Text(
+                  child: Text(
                     "We are the TED Sakarya High School Global Citizenship Club members. Over the past couple of years, we have been researching the global conflicts that citizens and our planet are face to face with. Our aim is to improve the awareness for citizenship conflicts, gender diversity and issues in our neighborhood.\n\nAs the Citizenship Theories group, this year we have developed a website and mobile application for global awareness. You can access the website from the link below:",
-                    style: Styles.textDefault,
+                    style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.textDefault : DarkStyles.textDefault),
                   )
               ),
               Container(
@@ -51,16 +52,16 @@ class AboutUs extends StatelessWidget {
               ),
               Container(
                   padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-                  child: const Text(
+                  child: Text(
                     "Our Team",
-                    style: Styles.header,
+                    style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.header : DarkStyles.header),
                   )
               ),
               Container(
                   padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-                  child: const Text(
+                  child: Text(
                     "Our team members are Osman Talha Taka, Mustafa Efe Güzel, Ulaş Kuşçu and Zeynep Rana Yavuz.",
-                    style: Styles.textDefault,
+                    style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.textDefault : DarkStyles.textDefault),
                   )
               ),
               Container(
@@ -75,9 +76,9 @@ class AboutUs extends StatelessWidget {
               ),
               Container(
                   padding: const EdgeInsets.fromLTRB(20, 20, 20, 10),
-                  child: const Text(
+                  child: Text(
                     "This app is free/open source software that is developed using the Flutter framework.",
-                    style: Styles.textDefault,
+                    style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.textDefault : DarkStyles.textDefault),
                   )
               ),
               Container(

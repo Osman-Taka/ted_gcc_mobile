@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:ted_gcc_mobile_app/styles.dart';
 import 'package:ted_gcc_mobile_app/main.dart';
 import 'package:ted_gcc_mobile_app/about_us.dart';
@@ -46,12 +47,12 @@ class NavBar extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.description),
-            title: const Text("Articles", style: Styles.textDefault),
+            title: Text("Articles", style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.textDefault : DarkStyles.textDefault)),
             onTap: () => pageLoader(context, 0)
           ),
           ListTile(
             leading: const Icon(Icons.people),
-            title: const Text("About Us", style: Styles.textDefault),
+            title: Text("About Us", style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.textDefault : DarkStyles.textDefault)),
             onTap: () => pageLoader(context, 1)
           ),
         ],

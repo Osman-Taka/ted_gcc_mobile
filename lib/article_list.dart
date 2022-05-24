@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:ted_gcc_mobile_app/article_detail.dart';
 import 'package:ted_gcc_mobile_app/styles.dart';
 import 'package:ted_gcc_mobile_app/models/article_model.dart';
@@ -28,7 +29,7 @@ class ArticleList extends StatelessWidget{
   }
 
   Widget _itemTitle(ArticleModel titleLocation){
-    return Text(titleLocation.heading, style: Styles.textDefault);
+    return Text(titleLocation.heading, style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.textDefault : DarkStyles.textDefault));
   }
 
   Widget _locationTile(BuildContext context, int index){
@@ -49,7 +50,7 @@ class ArticleList extends StatelessWidget{
   Widget build(BuildContext context){
     return(Scaffold(
         appBar: AppBar(
-          title: const Text("Articles", style: Styles.appbarStyle)
+          title: Text("Articles", style: (SchedulerBinding.instance!.window.platformBrightness == Brightness.light ? Styles.appbarStyle : DarkStyles.appbarStyle))
         ),
         drawer: const NavBar(),
         body: ListView.builder(
